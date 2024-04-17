@@ -1,0 +1,328 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #212529; /* Dark blue background */
+  color: #f8f9fa; /* Light text color */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #1a1a1a; /* Dark gray navbar background */
+  color: #fff; /* White text color */
+  padding: 2vw; /* Vertical padding */
+  margin-bottom: 30px;
+}
+
+
+.container {
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Distribute space between items */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-search input[type="text"],
+.navbar-search button,
+.navbar-filter select {
+  padding: 10px; /* Padding for input elements */
+  border: none; /* Remove borders */
+  border-radius: 4px; /* Add border radius */
+  font-size: 16px; /* Font size */
+}
+a{
+  text-decoration: none;
+  color: #f8f9fa;
+ 
+}
+
+.login-button{
+  display: inline-block;
+  padding: 0.6vw 2vw;
+  background-color: #495057;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2vw;
+  margin-left: 3vw;
+}
+.login-button:hover{
+  background-color: #1a1a1a;
+}
+.navbar-search button {
+  background-color: #495057; /* Dark gray background */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  cursor: pointer; /* Cursor pointer */
+}
+
+.navbar-search button:hover {
+  background-color: #212529; /* Darker background on hover */
+}
+
+/* Main heading style */
+h1 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Container for menu items */
+#menuItemsContainer {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap items to new rows as needed */
+  justify-content: start; /* Distribute space between items */
+  align-items: flex-start; /* Align items to the top of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px; /* Maximum width of the container */
+}
+
+/* Individual menu item style */
+.menu-item {
+  background-color: #495057; /* Dark gray background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding */
+  margin:20px 30px; /* Space between items */
+  width: calc(33.33% - 60px); /* Calculate width for three items per row */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.menu-item:hover {
+  transform: translateY(-5px); /* Move item up slightly on hover */
+}
+
+.menu-item img {
+  width: 100%; /* Make image fill the container */
+  height: 200px; /* Set fixed height */
+  object-fit: cover; /* Cover the container */
+  border-radius: 8px 8px 0 0; /* Rounded corners for top */
+}
+
+.menu-item-content {
+  padding: 20px; /* Padding */
+}
+
+.menu-item h2 {
+  margin: 10px 0; /* Margin */
+  font-size: 20px; /* Larger font size */
+}
+
+.menu-item p {
+  margin-bottom: 10px; /* Margin bottom */
+  font-size: 16px; /* Font size */
+  line-height: 1.5; /* Line height */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  display: -webkit-box; /* For webkit browsers */
+  -webkit-line-clamp: 3; /* Limit to three lines */
+  -webkit-box-orient: vertical; /* Vertical orientation */
+}
+
+.menu-item button {
+  background-color: #1a1a1a; /* Dark gray background */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.menu-item button:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Pagination styles */
+#paginationContainer {
+  text-align: center; /* Center align pagination */
+  margin: 20px; /* Margin space from the top */
+}
+
+#paginationContainer button {
+  margin: 0 5px; /* Margin between pagination buttons */
+  padding: 5px 10px; /* Padding for pagination buttons */
+  border: 1px solid #ccc; /* Border for pagination buttons */
+  border-radius: 5px; /* Border radius for pagination buttons */
+  background-color: #f9f9f9; /* Background color for pagination buttons */
+  cursor: pointer; /* Cursor pointer */
+}
+
+#paginationContainer button:hover {
+  background-color: #050303; /* Darker background on hover */
+  color: #ccc;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 820px) and (max-height: 1180px) {
+  .menu-item {
+    margin: 10px;
+  }
+  .menu-item {
+    width: calc(50% - 20px); /* Calculate width for two items per row */
+  }
+  .navbar {
+    padding: 40px 20px; /* Increase navbar padding for better spacing */
+  }
+  .login-button{
+    padding: 10px 40px;
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+/* Media query for mobile phones */
+
+@media only screen and (max-width: 650px) {
+  .navbar-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .navbar input {
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .navbar button {
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar select {
+    width: 100px;
+    height: 30px; /* Adjust height for better visibility */
+    display: flex;
+    color: #000; /* Set text color to black or any other color for better visibility */
+    padding: 5px; /* Adjust padding for better spacing */
+    font-size: 12px;
+  }
+  .login-button{
+    padding: 10px 25px;
+    font-size: 9px;
+    color: #fff;
+  }
+}
+/* Styling for the no items found message */
+.no-items-message {
+  margin: 10vw auto; /* Margin space */
+  color: red; /* Text color */
+  font-size: 25px; /* Font size */
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .navbar span {
+    font-size: 10px;
+  }
+  .navbar input {
+    width: 100px;
+    height: 20px;
+    font-size: 7px;
+  }
+  .navbar button {
+    width: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+  }
+  .navbar select {
+    width: 80px;
+    height: 20px; /* Adjust height for better visibility */
+    display: flex;
+    color: #000; /* Set text color to black or any other color for better visibility */
+    padding: 5px; /* Adjust padding for better spacing */
+    font-size: 8px;
+  }
+
+  .menu-item {
+    margin: 10px 20px;
+  }
+  .menu-item {
+    width: calc(100% - 40px); /* Calculate width for one item per row */
+  }
+  .navbar {
+    flex-direction: column; /* Arrange navbar items vertically */
+    padding: 20px; /* Increase padding for better spacing */
+  }
+  #paginationContainer {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 290px) {
+  .navbar-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .navbar span {
+    font-size: 6px;
+  }
+  .navbar input {
+    width: 50px;
+    height: 20px;
+    font-size: 7px;
+  }
+
+  .navbar button {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+  }
+
+  .navbar select {
+    width: 50px;
+    height: 10px; /* Adjust height for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000; /* Set text color to black or any other color for better visibility */
+    padding: 5px; /* Adjust padding for better spacing */
+    font-size: 5px;
+  }
+  .login-button{
+    padding: 8px 20px;
+    font-size: 9px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+}
