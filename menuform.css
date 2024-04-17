@@ -45,6 +45,11 @@ nav >div{
   border-radius: 4px;
   color: black;
   padding: 10px 20px;
+  font-size: 12px;
+}
+#menucard-btn:hover{
+  background-color: #45a049;
+
 }
 h2 {
   text-align: center;
